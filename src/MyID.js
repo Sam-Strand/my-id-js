@@ -1,3 +1,7 @@
+/**
+ * @typedef {string} MyID
+ */
+
 const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const lettersDigits = letters + '0123456789'
 
@@ -27,12 +31,12 @@ const validateID = (id) => {
  * 
  * @overload
  * Генерирует новый ID
- * @returns {MyIDString} Новый сгенерированный идентификатор
+ * @returns {MyID} Новый сгенерированный идентификатор
  *
  * @overload
  * Валидирует существующий ID
  * @param {string} id - Идентификатор для валидации
- * @returns {MyIDString} Валидный идентификатор
+ * @returns {MyID} Валидный идентификатор
  * @throws {Error} Если ID не соответствует формату
  */
 export function MyID(id) {
