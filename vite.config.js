@@ -6,7 +6,6 @@ export default defineConfig({
         dts()
     ],
     build: {
-        outDir: 'dist',
         lib: {
             entry: 'src/index.js',
             name: 'my-id',
