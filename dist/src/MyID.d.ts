@@ -6,8 +6,9 @@
  * - первый символ: латинская буква (a–z, A–Z)
  * - остальные 21 символ: латинские буквы или цифры (a–z, A–Z, 0–9)
  *
- * - MyID() → сгенерировать новый ID
+ * - MyID() → сгенерировать новый криптостойкий случайный ID
  * - MyID(id) → провалидировать переданный ID, выбросить ошибку при несоответствии
+ * - MyID.derive(source) → асинхронно получить детерминированный ID из строки source
  *
  * @overload
  * Генерирует новый ID
@@ -28,8 +29,9 @@ export function MyID(): MyID;
  * - первый символ: латинская буква (a–z, A–Z)
  * - остальные 21 символ: латинские буквы или цифры (a–z, A–Z, 0–9)
  *
- * - MyID() → сгенерировать новый ID
+ * - MyID() → сгенерировать новый криптостойкий случайный ID
  * - MyID(id) → провалидировать переданный ID, выбросить ошибку при несоответствии
+ * - MyID.derive(source) → асинхронно получить детерминированный ID из строки source
  *
  * @overload
  * Генерирует новый ID
@@ -43,3 +45,15 @@ export function MyID(): MyID;
  */
 export function MyID(id: string): MyID;
 export type MyID = string;
+export namespace MyID {
+    export { deriveID as derive };
+}
+/**
+ * Детерминированно создаёт ID из переданной строки-источника.
+ * Для одинакового source всегда возвращает один и тот же ID.
+ *
+ * @param {string} source - Исходная строка (например, email или username)
+ * @returns {Promise<MyID>} Промис с идентификатором
+ */
+declare function deriveID(source: string): Promise<MyID>;
+export {};
