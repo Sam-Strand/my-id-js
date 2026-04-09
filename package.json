@@ -21,7 +21,7 @@
   "exports": {
     ".": {
       "development": "./src/index.js",
-      "import": "./dist/my-id.es.js",
+      "import": "./dist/my-id.js",
       "types": "./dist/index.d.ts"
     }
   },
