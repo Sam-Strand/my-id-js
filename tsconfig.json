@@ -1,11 +1,22 @@
 {
     "compilerOptions": {
-        "checkJs": true,
-        "allowJs": true,
+        "declaration": true,
         "target": "ES2020",
-        "noEmit": true
+        "moduleResolution": "bundler",
+        "allowJs": true,
+        "checkJs": true,
+        "resolveJsonModule": true,
+        "noImplicitAny": false,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "emitDeclarationOnly": true
     },
     "include": [
-        "src/**/*.js"
+        "src/**/*.js",
+        "src/**/*.vue"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.scss"
     ]
 }
