@@ -2,7 +2,6 @@
   "name": "my-id",
   "version": "1.1.1",
   "description": "",
-  "module": "dist/my-id.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sam-Strand/my_id_js.git"
+    "url": "git+https://github.com/Sam-Strand/my-id-js.git"
   },
   "author": "Саадовский М.К.",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Sam-Strand/my_id_js/issues"
+    "url": "https://github.com/Sam-Strand/my-id-js/issues"
   },
-  "homepage": "https://github.com/Sam-Strand/my_id_js#readme",
+  "homepage": "https://github.com/Sam-Strand/my-id-js#readme",
   "exports": {
     ".": {
       "development": "./src/index.js",
