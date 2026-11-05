@@ -8,7 +8,6 @@ export default defineConfig({
     build: {
         lib: {
             entry: 'src/index.js',
-            name: 'my-id',
             formats: ['es']
         },
         rollupOptions: {
